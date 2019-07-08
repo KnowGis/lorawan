@@ -44,6 +44,7 @@ const (
 	KR_920_923 Name = "KR_920_923"
 	US_902_928 Name = "US_902_928"
 	RU_864_870 Name = "RU_864_870"
+	OPG_470_510 Name = "OPG_470_510"
 )
 
 // Available ISM bands (by common name).
@@ -58,6 +59,7 @@ const (
 	KR920 Name = "KR920"
 	IN865 Name = "IN865"
 	RU864 Name = "RU864"
+	OPG470 Name = "OPG470"
 )
 
 // Modulation defines the modulation type.
@@ -614,6 +616,8 @@ func GetConfig(name Name, repeaterCompatible bool, dt lorawan.DwellTime) (Band, 
 		return newAU915Band(repeaterCompatible, dt)
 	case CN_470_510, CN470:
 		return newCN470Band(repeaterCompatible)
+	Case OPG_470_510, OPG470:
+		return newOPG470Band(repeaterCompatible)
 	case CN_779_787, CN779:
 		return newCN779Band(repeaterCompatible)
 	case EU_433, EU433:
