@@ -34,31 +34,31 @@ const (
 
 // Available ISM bands (deprecated, use the common name).
 const (
-	AS_923     Name = "AS_923"
-	AU_915_928 Name = "AU_915_928"
-	CN_470_510 Name = "CN_470_510"
-	CN_779_787 Name = "CN_779_787"
-	EU_433     Name = "EU_433"
-	EU_863_870 Name = "EU_863_870"
-	IN_865_867 Name = "IN_865_867"
-	KR_920_923 Name = "KR_920_923"
-	US_902_928 Name = "US_902_928"
-	RU_864_870 Name = "RU_864_870"
+	AS_923      Name = "AS_923"
+	AU_915_928  Name = "AU_915_928"
+	CN_470_510  Name = "CN_470_510"
+	CN_779_787  Name = "CN_779_787"
+	EU_433      Name = "EU_433"
+	EU_863_870  Name = "EU_863_870"
+	IN_865_867  Name = "IN_865_867"
+	KR_920_923  Name = "KR_920_923"
+	US_902_928  Name = "US_902_928"
+	RU_864_870  Name = "RU_864_870"
 	OPG_470_510 Name = "OPG_470_510"
 )
 
 // Available ISM bands (by common name).
 const (
-	EU868 Name = "EU868"
-	US915 Name = "US915"
-	CN779 Name = "CN779"
-	EU433 Name = "EU433"
-	AU915 Name = "AU915"
-	CN470 Name = "CN470"
-	AS923 Name = "AS923"
-	KR920 Name = "KR920"
-	IN865 Name = "IN865"
-	RU864 Name = "RU864"
+	EU868  Name = "EU868"
+	US915  Name = "US915"
+	CN779  Name = "CN779"
+	EU433  Name = "EU433"
+	AU915  Name = "AU915"
+	CN470  Name = "CN470"
+	AS923  Name = "AS923"
+	KR920  Name = "KR920"
+	IN865  Name = "IN865"
+	RU864  Name = "RU864"
 	OPG470 Name = "OPG470"
 )
 
@@ -616,7 +616,7 @@ func GetConfig(name Name, repeaterCompatible bool, dt lorawan.DwellTime) (Band, 
 		return newAU915Band(repeaterCompatible, dt)
 	case CN_470_510, CN470:
 		return newCN470Band(repeaterCompatible)
-	Case OPG_470_510, OPG470:
+	case OPG_470_510, OPG470:
 		return newOPG470Band(repeaterCompatible)
 	case CN_779_787, CN779:
 		return newCN779Band(repeaterCompatible)
